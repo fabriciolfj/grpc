@@ -3,6 +3,7 @@ package com.github.fabriciolfj.grpc.protobuf;
 import com.github.fabriciolfj.protobuf.Address;
 import com.github.fabriciolfj.protobuf.Car;
 import com.github.fabriciolfj.protobuf.Person;
+import com.google.protobuf.Int32Value;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,11 +32,11 @@ public class CompositionDemo {
 
         Person person = Person.newBuilder()
                 .setName("Fabricio")
-                .setAge(36)
+                .setAge(Int32Value.newBuilder().setValue(36).build())
                 .setAddress(address)
                 .addAllCars(cars)
                 .build();
 
-        System.out.println(person.toString());
+        System.out.println(person);
     }
 }

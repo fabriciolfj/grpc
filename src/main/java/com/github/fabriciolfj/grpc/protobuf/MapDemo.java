@@ -1,5 +1,6 @@
 package com.github.fabriciolfj.grpc.protobuf;
 
+import com.github.fabriciolfj.protobuf.BodyStyle;
 import com.github.fabriciolfj.protobuf.Car;
 import com.github.fabriciolfj.protobuf.Dealer;
 
@@ -10,12 +11,14 @@ public class MapDemo {
                 .setMake("Honda")
                 .setModel("Accord")
                 .setYear(2020)
+                .setBodyStyle(BodyStyle.SUV)
                 .build();
 
         Car civic  = Car.newBuilder()
                 .setMake("Honda")
                 .setModel("Civic")
                 .setYear(2020)
+                .setBodyStyle(BodyStyle.COUPE)
                 .build();
 
         Dealer dealer =  Dealer.newBuilder()
@@ -24,7 +27,11 @@ public class MapDemo {
                 .build();
 
         System.out.println(
-                dealer.getModelMap()
+                dealer.getModelOrThrow(2005).getBodyStyleValue()
+        );
+
+        System.out.println(
+                dealer.getModelOrThrow(2005).getBodyStyle()
         );
     }
 }

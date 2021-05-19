@@ -1,13 +1,2 @@
-com\github\fabriciolfj\protobuf\Car.class
-com\github\fabriciolfj\protobuf\DealerOrBuilder.class
-com\github\fabriciolfj\protobuf\Address$1.class
-com\github\fabriciolfj\protobuf\Dealer$ModelDefaultEntryHolder.class
-com\github\fabriciolfj\protobuf\Car$1.class
-com\github\fabriciolfj\protobuf\Dealer$1.class
-com\github\fabriciolfj\protobuf\Car$Builder.class
-com\github\fabriciolfj\protobuf\Address.class
-com\github\fabriciolfj\protobuf\AddressOrBuilder.class
-com\github\fabriciolfj\protobuf\Dealer$Builder.class
-com\github\fabriciolfj\protobuf\CarOrBuilder.class
-com\github\fabriciolfj\protobuf\Dealer.class
-com\github\fabriciolfj\protobuf\Address$Builder.class
+com\github\fabriciolfj\protobuf\Type$1.class
+com\github\fabriciolfj\protobuf\Type.class

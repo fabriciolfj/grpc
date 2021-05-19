@@ -1,6 +1,7 @@
 package com.github.fabriciolfj.grpc.protobuf;
 
 import com.github.fabriciolfj.protobuf.*;
+import com.google.protobuf.Int32Value;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,7 +12,7 @@ public class PersonDemo {
 
     public static void main(String[] args) throws IOException {
         final Person person = Person.newBuilder()
-                .setAge(36)
+                .setAge(Int32Value.newBuilder().setValue(36).build())
                 .setName("Fabricio")
                 .build();
 
@@ -22,5 +23,6 @@ public class PersonDemo {
         final Person newPerson = Person.parseFrom(bytes);
 
         System.out.println(newPerson.toString());
+        System.out.println(person.hasAge());
     }
 }
