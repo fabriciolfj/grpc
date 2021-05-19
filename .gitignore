@@ -8,3 +8,5 @@ target/protoc-dependencies/3af3a8ce9db22fecc536f456391e3d33/google/protobuf/
 target/generated-sources/protobuf/java/com/github/fabriciolfj/protobuf/
 
 target/maven-archiver/
+
+target/**
