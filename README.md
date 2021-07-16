@@ -2,7 +2,7 @@
 - Utiliza proto como serialização e deserialização
 
 ## Conceitos sobre http2
-- Os dados trafegados são binários, utilizando o GZIP
+- Os dados trafegados são binários, utilizando o GZIP, por padrão
 - O cabeçalho é stateful, ou seja, guarda estrado transacional. Exemplo: primeira requisição envia um conjunto de cabeçalhos, na segunda, caso não houve alteração, envia os mesmos. (HPACK)
 - Server push: ao realizar a requisição, o servidor já envia todo o contéudo necessário para renderizar a pagina por exemplo.
 - Multiplexação: com uma conexão tcp aberta, a comunição com o servidor é paralela, ou seja, não espero a requisição anterior terminar para chamar outra e as resposta vão chegando conforme ficarem prontas.
