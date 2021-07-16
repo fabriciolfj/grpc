@@ -1,5 +1,19 @@
 # Http2 com grpc
 - Utiliza proto como serialização e deserialização
+
+## Funcionamento
+- Aplicativo client chama o stub (chamada local)
+- Stub chama o servidor gRPC
+- Valor devolvido pelo servidor, passa para o client 
+
+## Camadas
+- Stub: client chama o servidor através de stubs. 
+  - camada mais alta
+  - gerada a partir de arquivos IDL (interface definition language)
+  - arquivos possui extensão .proto 
+- Transporte: camada mais baixa, utiliza protocolo http2
+
+## Formas de comunicação
 - Existem 4 formas de comunicação
   - unary: cliente e servidor (uma request, um response)
     O canal de comunicação se fecha, após enviar a resposta
