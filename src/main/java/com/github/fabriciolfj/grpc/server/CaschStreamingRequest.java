@@ -32,3 +32,4 @@ public class CaschStreamingRequest implements StreamObserver<DepositRequest> {
         this.balanceStreamObserver.onCompleted();
     }
 }
+
