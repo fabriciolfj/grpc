@@ -38,10 +38,11 @@ public class BankClient {
     public void balanceTest() {
         BalanceCheckRequest balanceCheckRequest = BalanceCheckRequest
                 .newBuilder()
-                .setAccountNumber(11)
+                .setAccountNumber(10)
                 .build();
-        Balance balance = this.bankServiceBlockingStub.getBalance(balanceCheckRequest);
-        System.out.println(balance);
+        CountDownLatch latch = new CountDownLatch(1);
+        var result = this.bankServiceBlockingStub.getBalance(balanceCheckRequest);
+        System.out.println(result);
     }
 
     //blocking
